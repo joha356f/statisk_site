@@ -1,3 +1,36 @@
+/* CATEGORIES */
+
+.logo {
+  max-width: 10em;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: 108px 1fr;
+  width: 100%;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-family: "termina", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+a:hover {
+  color: hsl(348, 58%, 42%);
+}
+
+nav ul {
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  margin-top: 5em;
+}
+
 .breadcrumb {
   list-style: none;
 }
@@ -20,45 +53,4 @@
 
 .breadcrumb-item a:hover {
   color: red;
-}
-
-h1 {
-  text-align: center;
-  font-family: "termina", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #910303;
-  font-size: 100px;
-}
-nav a {
-  text-decoration: none;
-  color: black;
-  font-family: "termina", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  font-size: 70px;
-  text-decoration: none;
-}
-
-a:hover {
-  color: hsl(348, 58%, 42%);
-}
-
-nav ul {
-  text-align: center;
-  list-style: none;
-  padding: 0;
-  margin-top: 3em;
-}
-
-body {
-  background-color: #eaeaea;
-  /*  border-style: double; */
-}
-
-.line {
-  height: 1.5px;
-  width: 1300px;
-  margin: auto;
-  background-color: #910303;
 }
