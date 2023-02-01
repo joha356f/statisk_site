@@ -1,34 +1,74 @@
 /* CATEGORIES */
 
-.logo {
-  max-width: 10em;
+body {
+  background-color: #eaeaea;
 }
 
-nav {
-  display: grid;
-  grid-template-columns: 108px 1fr;
-  width: 100%;
+.line {
+  height: 1.5px;
+  width: 1300px;
+  margin: auto;
+  background-color: #910303;
+}
+
+h1 {
+  text-align: center;
+  font-family: "termina", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #910303;
+  font-size: 70px;
 }
 
 nav a {
   text-decoration: none;
   color: black;
-  font-family: "termina", sans-serif;
-  font-weight: 500;
+  font-family: termina;
+  font-weight: 400;
   font-style: normal;
-  font-size: 20px;
-  text-decoration: none;
+  font-size: 30px;
 }
 
 a:hover {
-  color: hsl(348, 58%, 42%);
+  color: hsl(0, 78%, 27%);
 }
 
 nav ul {
-  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
   list-style: none;
-  padding: 0;
-  margin-top: 5em;
+  padding: 1.5em;
+}
+
+.category_list {
+  display: flex;
+  flex-wrap: wrap;
+
+  /*  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr); */
+  row-gap: 2em;
+}
+
+.category_list > a {
+  border-style: double;
+  border-width: 5px;
+  border-color: black;
+  background-color: transparent;
+  font-family: termina;
+  font-weight: 800;
+  color: #910303;
+  width: 450px;
+  height: 130px;
+  margin-inline: auto;
+  text-decoration: none;
+  font-size: 40px;
+  text-align: center;
+  padding-top: 1.5em;
+}
+.category_list > a:hover {
+  color: hsl(0, 0%, 0%);
 }
 
 .breadcrumb {
@@ -54,3 +94,110 @@ nav ul {
 .breadcrumb-item a:hover {
   color: red;
 }
+
+/* PRODUCTS */
+
+.product_grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.small_product {
+  width: 300px;
+  border-style: double;
+  position: relative;
+}
+
+.product_grid {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2em;
+}
+
+.product_grid > div {
+  display: flex;
+  flex-direction: column;
+}
+.small_product img {
+  border-style: double;
+  border-color: black;
+  width: 265px;
+  margin: 1em;
+}
+
+h2 {
+  font-family: termina;
+  text-align: center;
+}
+
+.subtle {
+  font-family: termina;
+  color: #536e8a;
+  text-align: center;
+}
+
+.price {
+  font-family: termina;
+  text-align: center;
+  margin-bottom: 7em;
+}
+.link {
+  margin-bottom: 2em;
+  position: absolute;
+  bottom: 0;
+  margin-left: 4em;
+}
+
+.link a {
+  border-style: double;
+  background-color: transparent;
+  padding: 15px;
+  text-align: center;
+  width: fit-content;
+  margin-inline: auto;
+  margin-top: auto;
+  margin-bottom: 2em;
+  color: rgb(41, 52, 97);
+  text-decoration: none;
+  font-family: termina;
+  font-weight: 400;
+  font-size: 20px;
+  font-style: normal;
+}
+
+.sold_out_container img {
+  opacity: 0.5;
+}
+
+.sold_out {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-family: termina;
+  font-weight: 800;
+  color: white;
+}
+
+.sale {
+  font-family: termina;
+  background-color: #910303;
+  color: white;
+  width: fit-content;
+  padding: 5px;
+  position: absolute;
+  top: 25px;
+  left: 16px;
+}
+
+.percentage {
+  font-family: termina;
+
+  color: #910303;
+  width: fit-content;
+  padding: 5px;
+  position: absolute;
+  top: 360px;
+  left: 16px;
+}
+
+/* PRODUCT VIEW */
