@@ -71,30 +71,6 @@ nav ul {
   color: hsl(0, 0%, 0%);
 }
 
-.breadcrumb {
-  list-style: none;
-}
-
-.breadcrumb-item {
-  display: inline;
-  font-size: 18px;
-}
-
-.breadcrumb li + li:before {
-  padding: 8px;
-  color: black;
-  content: ">>";
-}
-
-.breadcrumb-item a {
-  color: #2e4053;
-  text-decoration: none;
-}
-
-.breadcrumb-item a:hover {
-  color: red;
-}
-
 /* PRODUCTS */
 
 .product_grid {
@@ -201,3 +177,102 @@ h2 {
 }
 
 /* PRODUCT VIEW */
+
+.breadcrumb {
+  list-style: none;
+  margin-left: 5em;
+}
+
+.breadcrumb-item {
+  display: inline;
+  font-size: 18px;
+}
+
+.breadcrumb li + li:before {
+  padding: 8px;
+  color: black;
+  content: ">>";
+}
+
+.breadcrumb-item a {
+  color: #2e4053;
+  text-decoration: none;
+  font-family: termina;
+}
+
+.breadcrumb-item a:hover {
+  color: red;
+}
+
+.product_container {
+  /* display: grid;
+  grid-template-columns: repeat(2, 1fr); */
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2em;
+  border-style: double;
+  padding: 3em;
+  margin: 2em;
+}
+.product_container img {
+  border-style: double;
+  border-color: black;
+  width: 500px;
+}
+
+.product_container > div {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+}
+h3 {
+  font-family: termina;
+  font-size: 50px;
+}
+
+.size_guide {
+  font-family: termina;
+  background-color: #910303;
+  width: fit-content;
+  padding: 25px;
+  border-style: double;
+  border-color: white;
+  color: white;
+  margin: auto;
+}
+
+.sizes_container {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+
+.sizes_container p {
+  padding: 2em;
+  font-family: termina;
+  font-weight: 500;
+  font-size: 20px;
+}
+.sizes_container p:hover {
+  color: #910303;
+}
+
+.cart {
+  font-family: termina;
+  background-color: #2e4053;
+  width: fit-content;
+  padding: 25px;
+  border-style: double;
+  border-color: white;
+  color: white;
+  margin: auto;
+}
+
+.product_information {
+  padding-top: 3em;
+}
+
+p {
+  text-align: center;
+  font-family: termina;
+}
