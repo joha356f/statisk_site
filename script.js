@@ -5,7 +5,7 @@ fetch(productDataBase)
 
 function showProduct(productData) {
   const gallery = document.querySelector(".product_grid");
-  const template = document.querySelector("#product_card_template").content;
+  const template = document.getElementById("product_card_template").content;
   productData.forEach((product) => {
     const templateClone = template.cloneNode(true);
 
@@ -14,7 +14,7 @@ function showProduct(productData) {
     templateClone.querySelector("img").src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
     templateClone.querySelector("img").alt = product.productdisplayname;
     templateClone.querySelector(".subtle").textContent = product.brandname + product.articletype;
-    templateClone.querySelector(".name").textContent = product.productdisplayname;
+    templateClone.querySelector("h2").textContent = product.productdisplayname;
     templateClone.querySelector(".price").textContent = product.price - product.discount;
     if (product.soldout > 0) {
       templateClone.querySelector(".small_product").classList.add("soldout");

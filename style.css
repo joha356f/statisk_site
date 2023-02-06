@@ -26,7 +26,7 @@ nav a {
   font-family: termina;
   font-weight: 400;
   font-style: normal;
-  font-size: 30px;
+  font-size: 2em;
 }
 
 a:hover {
@@ -76,6 +76,7 @@ nav ul {
 .product_grid {
   display: flex;
   flex-wrap: wrap;
+  row-gap: 20px;
 }
 
 .small_product {
@@ -117,6 +118,10 @@ h2 {
   text-align: center;
   margin-bottom: 7em;
 }
+
+.price::after {
+  content: " kr";
+}
 .link {
   margin-bottom: 2em;
   position: absolute;
@@ -141,20 +146,24 @@ h2 {
   font-style: normal;
 }
 
-.sold_out_container img {
-  opacity: 0.5;
+.soldout img {
+  filter: opacity(0.5);
 }
 
-.sold_out {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+.soldout::before {
+  content: "sold out";
   font-family: termina;
-  font-weight: 800;
+  background-color: #910303;
   color: white;
+  width: fit-content;
+  padding: 5px;
+  position: absolute;
+  top: 100px;
+  left: 16px;
+  z-index: 100;
 }
 
-.sale {
+.discount {
   font-family: termina;
   background-color: #910303;
   color: white;
@@ -163,17 +172,27 @@ h2 {
   position: absolute;
   top: 25px;
   left: 16px;
+  z-index: 100;
+}
+
+.discount::before {
+  content: "-";
+}
+.discount::after {
+  content: ",-";
 }
 
 .percentage {
   font-family: termina;
-
   color: #910303;
   width: fit-content;
   padding: 5px;
   position: absolute;
   top: 360px;
   left: 16px;
+}
+.discount:empty {
+  display: none;
 }
 
 /* PRODUCT VIEW */
