@@ -1,4 +1,4 @@
-const productDataBase = `https://kea-alt-del.dk/t7/api/products/`;
+const productDataBase = `https://kea-alt-del.dk/t7/api/products/?limit=100`;
 fetch(productDataBase)
   .then((res) => res.json())
   .then(showProduct);
@@ -15,7 +15,7 @@ function showProduct(productData) {
     templateClone.querySelector("img").alt = product.productdisplayname;
     templateClone.querySelector(".subtle").textContent = product.brandname + product.articletype;
     templateClone.querySelector("h2").textContent = product.productdisplayname;
-    templateClone.querySelector(".price").textContent = product.price - product.discount;
+    templateClone.querySelector(".price").textContent = Math.floor(product.price - (product.price / 100) * product.discount);
     if (product.soldout > 0) {
       templateClone.querySelector(".small_product").classList.add("soldout");
     }

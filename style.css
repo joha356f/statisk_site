@@ -179,7 +179,7 @@ h2 {
   content: "-";
 }
 .discount::after {
-  content: ",-";
+  content: "%";
 }
 
 .percentage {
